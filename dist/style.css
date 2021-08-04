@@ -1433,7 +1433,7 @@ input, select {
   }
   .header__top-menu {
     width: 100%;
-    background-image: url(../../dist/images/menu-bg.jpg);
+    background-image: url(dist/images/menu-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
