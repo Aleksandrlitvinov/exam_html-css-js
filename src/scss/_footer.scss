@@ -1,0 +1,62 @@
+.footer{
+    background-image: url(../../dist/images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__inner{
+        padding-top: 205px;
+        padding-bottom: 210px;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 770px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+
+        &-social{
+            width: 165px;
+            display: flex;
+            justify-content: space-between;
+
+            &-item{
+                width: 40px;
+                height: 40px;
+                border: 1px solid $white-color;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .8s;
+                &:hover{
+                    background-color: $white-color;
+                }
+                &:hover .footer__content-social-icon{
+                    fill: #7d5cf9;
+                }
+            }
+            &-icon{
+                width: 17px;
+                height: 17px;
+                fill: $white-color;
+            }
+        }
+    }
+    &__copyright{
+        padding-top: 38px;
+
+        &-text{
+            color: $white-color;
+            font-size: 14px;
+            font-family: "Gotham-book", sans-serif;
+        }
+        &-icon{
+            width: 15px;
+            height: 12px;
+            fill: $white-color;
+        }
+    }
+}

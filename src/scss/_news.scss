@@ -1,0 +1,164 @@
+.news{
+    background-image: url(../../dist/images/slider-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__inner{
+        padding: 180px 0 140px;
+    }
+    &__title{
+        font-size: 44px;
+        font-family: "Gotham-bold", sans-serif;
+        color: $white-color;
+        text-transform: uppercase;
+        line-height: 0.5;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+
+        &::before{
+            content: '';
+            width: 100px;
+            height: 1px;
+            background-color: $white-color;
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+    &__slider{
+        margin: 0 -15px;
+        padding-top: 100px;
+        
+        &-slide{
+            padding: 0 15px;
+            margin-bottom: 60px;
+            transition: all .3s;
+            &:hover{
+                transform: scaleX(1.1);
+            }
+            &-img{
+                width: 370px;
+                height: 240px;
+                object-fit: cover;
+            }
+            &-text{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-left: 22px;
+                padding-right: 28px;
+                width: 370px;
+                height: 275px;
+                background-color: $white-color;
+            }
+            &-title{
+
+                &-link{
+                    font-size: 22px;
+                    font-family: "Gotham-bold", sans-serif;
+                    color: rgb(44, 64, 88);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    line-height: 1.545;
+                    transition: all .3s;
+
+                    &:hover{
+                        color: #30a5e7;
+                    }
+                }
+            }
+            &-description{
+                font-size: 18px;
+                font-family: "Open Sans", sans-serif;
+                color: rgb(75, 85, 98);
+                line-height: 1.667;
+            }
+            &-author{
+                display: flex;
+                align-items: center;
+                padding-top: 40px;
+                &-photo{
+                    margin-right: 20px;
+                }
+                &-link{
+                    font-size: 18px;
+                    font-family: "Gotham-book", sans-serif;
+                    color: rgb(44, 64, 88);
+                    text-transform: uppercase;
+                    transition: all .3s;
+                    &:hover{
+                        color: #7e5aff;
+                    }
+                }
+                &-date{
+                    font-size: 14px;
+                    font-family: "Gotham-book", sans-serif;
+                    color: rgb(85, 183, 255);
+                }
+            }
+        }
+    }
+}
+
+.news__slider .slick-dots{
+    display: flex;
+    justify-content: center;
+}
+
+.slick-dots button{
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: none;
+    font-size: 0;
+    border: 1px solid $white-color;
+    background-color: transparent;
+    padding: 0;
+    margin: 20px 20px;
+}
+
+.slick-dots .slick-active button{
+    background-color: $white-color
+}
+
+.slick-prev,
+.slick-next{
+    width: 40px;
+    height: 40px;
+    border: 1px solid $white-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover{
+        background: $white-color; 
+    }
+    &:hover .slick-arrow-icon{
+        fill: #3498e1;
+    }
+}
+
+.slick-arrow-icon{
+    width: 8px;
+    height: 8px;
+    fill: $white-color
+}
+
+.slick-prev{
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%);
+    
+}
+.slick-next{
+    position: absolute;
+    bottom: 50%;
+    right: -60px;
+    transform: translateY(50%);
+}

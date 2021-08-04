@@ -1,0 +1,171 @@
+@import "variables";
+
+.header{
+    background-image: url(../../dist/images/header-bg.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+
+    &__top{
+        width: 100%;
+        
+        &-inner{
+            max-width: 1200px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        &-button-menu{
+            border: 2px solid $white-color;
+            border-radius: 10px;
+            background-color: transparent;
+            color: $white-color;
+            padding: 10px 20px;
+            display: none;
+        }
+        &-list{
+            width: 595px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 80px;
+            margin-right: 80px;
+
+            &-link{
+                font-family: 'Gotham-book', sans-serif;
+                font-size: 14px;
+                color: $white-color;
+                text-transform: uppercase;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: -23px;
+                    top: 4px;
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    border: 1px solid $white-color;
+                }
+            }
+        }
+        &-social{
+            width: 165px;
+            display: flex;
+            justify-content: space-between;
+
+            &-item{
+                width: 40px;
+                height: 40px;
+                border: 1px solid $white-color;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .8s;
+                &:hover{
+                    background-color: $white-color;
+                }
+                &:hover .header__top-social-icon{
+                    fill: #7d5cf9;
+                }
+            }
+            &-icon{
+                width: 17px;
+                height: 17px;
+                fill: $white-color;
+            }
+        }
+    }
+    &__content{
+        width: 100%;
+        &-title{
+            font-size: 80px;
+            font-family: "Gotham-bold", sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 38px;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+        &-subtitle{
+            font-size: 18px;
+            font-family: "Gotham-book", sans-serif;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+    }
+    &__scroll-frame{
+        width: 40px;
+        height: 40px;
+        border: 1px solid $white-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__scroll-icon{
+        width: 8px;
+        fill: $white-color;
+    }
+}
+
+.active::before{
+    background-color: $white-color;
+}
+
+.header__content-slider .slick-list{
+    align-self: center;
+}
+
+.header__content-slider  .slick-dots{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: -75px;
+    
+}
+
+.show{
+    transform: translateY(0) !important;
+}
+
+.show .header__top-list-link{
+    transform: translateX(0);
+}
+
+.header__top-button-burger.close span{
+    transform: translate(0px, -50%) scale(0);
+}
+
+.header__top-button-burger.close::before{
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);
+}
+
+.header__top-button-burger.close::after{
+    bottom: 50%;
+    transform: translate(0, 50%) rotate(45deg);
+}
+
+
+

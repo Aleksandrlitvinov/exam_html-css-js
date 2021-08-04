@@ -1,0 +1,133 @@
+@import "mixin";
+@import "variables";
+
+.projects{
+    &__inner{
+        padding-top: 140px;
+        padding-bottom: 140px;      
+    }
+    &__title{
+        @include title;
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 165px;
+        position: relative;
+        &::before{
+            content: '';
+            width: 100px;
+            height: 1px;
+            background-color: $base-color;
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+    &__trade{
+        padding-bottom: 210px;
+        padding-right: 225px;
+        display: flex;
+        justify-content: space-between;
+        
+        &-img{
+            position: relative;
+            &-front{
+                position: absolute;
+                left: 215px;
+                top: 70px;
+            }
+        }
+        &-text{
+            width: 460px;
+            padding-top: 128px;
+        }
+        &-pretitle{
+            font-size: 22px;
+            font-family: "Gotham-book", sans-serif;
+            color: $base-color;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+        }
+        &-title{
+            margin-bottom: 40px;
+            @include title;
+        }
+        &-description{
+            @include description;
+        }
+        &-button{
+            @include button;
+            margin-bottom: 60px;
+            transition: all .3s ease-in-out;
+            &:hover{
+                color: $white-color;
+                border: 1px solid #55b7ff ;
+                background: #55b7ff;
+            }
+        }
+        &-location{
+            margin-top: 60px;
+            font-family: 'Open Sans', sans-serif;
+            font-style: italic;
+        }
+    }
+    &__comerce{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 215px;
+        
+        &-text{
+            width: 480px;
+            padding-top: 128px;
+        }
+        &-pretitle{
+            font-size: 22px;
+            font-family: "Gotham-book", sans-serif;
+            color: $base-color;
+            text-transform: uppercase;
+            margin-bottom: 17px;
+        }
+        &-title{
+            margin-bottom: 40px;
+            @include title;
+        }
+        &-description{
+            @include description;
+        }
+        &-button{
+            @include button;
+            margin-bottom: 60px;
+            transition: all .3s ease-in-out;
+            &:hover{
+                color: $white-color;
+                border: 1px solid #7e5aff;
+                background: #7e5aff;
+            }
+        }
+        &-location{
+            margin-top: 60px;
+            font-family: 'Open Sans', sans-serif;
+            font-style: italic;
+
+            &-icon{
+                width: 11px;
+                height: 15px;
+                fill: $base-color;
+                margin-right: 10px;
+                position: relative;
+                top: 3px;
+            }
+        }
+        &-img{
+            position: relative;
+
+            &-front{
+                position: absolute;
+                top: 70px;
+                right: 215px;
+                
+            }
+        }
+    }
+}

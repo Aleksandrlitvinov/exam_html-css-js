@@ -1,0 +1,34 @@
+@import "reset";
+*{
+    box-sizing: border-box
+}
+@font-face {
+    font-family: 'Gotham-bold';
+    src: url(../dist/fonts/Gotham-Bold.ttf);
+}
+@font-face {
+    font-family: 'Gotham-book';
+    src: url(../dist/fonts/Gotham-Book.ttf);
+}
+@font-face {
+    font-family: 'Gotham-medium';
+    src: url(../dist/fonts/Gotham-Medium.ttf);
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@import "header";
+@import "projects";
+@import "news";
+@import "gallery";
+@import "contact";
+@import "footer";
+@import "mixin";
+@import "variables";
+@import "media";

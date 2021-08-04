@@ -1,0 +1,31 @@
+@import "variables";
+
+@mixin title {
+  font-size: 44px;
+  font-family: "Gotham-bold", sans-serif;
+  color: $base-color;
+  text-transform: uppercase;
+  line-height: 0.5;
+}
+
+@mixin description{
+  font-size: 18px;
+  font-family: "Gotham-book";
+  color: rgb(75, 85, 98);
+  line-height: 1.667;
+  margin-bottom: 37px;
+}
+
+@mixin button {
+  width: 190px;
+  height: 50px;
+  border: 1px solid $base-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Gotham-book", sans-serif;
+  color: $base-color;
+  text-transform: uppercase;
+}
+

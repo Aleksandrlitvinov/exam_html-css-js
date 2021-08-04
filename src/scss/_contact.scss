@@ -1,0 +1,92 @@
+.contact{
+    position: relative;
+    &__map{
+        width: 100%;
+        height: 700px;
+    }
+    &__form{
+        background-color: $white-color;
+        background-image: url(../../dist/images/form-bg1.jpg);
+        background-position: bottom, left;
+        background-repeat: no-repeat;
+        max-width: 770px;
+        height: 450px;
+        width: 100%;
+        position: absolute;
+        top: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        &-inner{
+            padding: 90px 60px 80px;
+        }
+        &-title{
+            @include title;
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
+            position: relative;
+            &::before{
+                content: '';
+                width: 100px;
+                height: 1px;
+                background-color: $base-color;
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }      
+        &-content{
+            display: flex;
+            justify-content: space-between;
+    
+            &-data-item{
+                font-family: "Gotham-book", sans-serif;
+                display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+                color: $base-color;
+            }
+            &-data-icon{
+                height: 18px;
+                width: 15px;
+                fill: #7e5aff;
+                margin-right: 10px;
+            }
+            &-items-name{
+                margin-bottom: 40px;
+            }
+            &-items-email{
+                margin-bottom: 30px;
+            }
+            &-items-input{
+                max-width: 310px;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #d5d9de;
+                outline: none;
+                background-color: transparent;
+                padding-bottom: 20px;
+                transition: all .3s;
+                &:focus{
+                    border-bottom: 1px solid $black-color;
+                }
+            }
+            &-items-button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 140px;
+                height: 50px;
+                background-color: transparent;
+                border: 1px solid $base-color;
+                margin-left: 170px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
